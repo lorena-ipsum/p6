@@ -1,0 +1,3 @@
+[submodule "wp-content/themes/oceanwp-child"]
+	path = wp-content/themes/oceanwp-child
+	url = https://github.com/lorena-ipsum/planty
