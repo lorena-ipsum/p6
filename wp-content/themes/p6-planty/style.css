@@ -32,8 +32,7 @@ h1 {
     color: #3B8E46;
 }
 
-h2 {f
-    ont-family: Syne;
+h2 {font-family: Syne;
     font-size: 30px;
     font-weight: 800;
     line-height: 36px;
@@ -48,4 +47,11 @@ h3{
     line-height: 36px;
     letter-spacing: 0em;
     text-align: center;
+}
+
+
+.footer {justify-content: center;
+    background-color: white;
+    align-items: center;
+    height: 60px;
 }
