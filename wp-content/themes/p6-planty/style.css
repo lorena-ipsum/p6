@@ -50,8 +50,86 @@ h3{
 }
 
 
-.footer {justify-content: center;
+.footerfoutu {
+    justify-content: center;
+    align-items: center;
     background-color: white;
     align-items: center;
     height: 60px;
+}
+
+/*deu nao*/
+.footerfoutu a {
+    text-decoration: none !important;
+    font: Syne;
+    justify-content: center;
+    align-items: center;
+}
+
+/*formulaire 'nous contacter'*/
+.nous-contacter {
+    font-family: Syne;
+
+}
+
+.wpcf7-form-control-wrap {
+    border-radius: 10px;
+}
+
+
+/* nav */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    flex-shrink: 0;
+    background-color: white;
+}
+
+#branding {
+    flex: 1; 
+}
+
+#logo img {
+    width: 201px;
+    height: 19px;
+    flex-shrink: 0;
+}
+
+#menu {
+    flex: 1; 
+    text-align: right; 
+}
+
+.menu-container {
+    display: inline-block;
+}
+
+#menu ul {
+    list-style: none !important;
+    margin: 0;
+    padding: 0;
+}
+
+#menu li {
+    display: inline-block;
+    margin-left: 20px !important;
+}
+
+#menu ul li a {
+    font-family: Syne !important; 
+    font-size: 16px !important;
+    font-weight: 400 !important; 
+    line-height: 19px !important;
+    letter-spacing: 0em !important;
+    text-align: left !important;
+}
+
+
+
+/* ce quils pensent */
+
+.fatiha {
+    text-align: left;
 }
