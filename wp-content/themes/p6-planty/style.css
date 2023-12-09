@@ -51,30 +51,102 @@ h3{
 
 
 .footerfoutu {
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
     background-color: white;
-    align-items: center;
-    height: 60px;
+    font: Syne !important;
+    height: 60px !important;
 }
 
 /*deu nao*/
 .footerfoutu a {
     text-decoration: none !important;
-    font: Syne;
+    color: black;
+    font-family: syne;
+  
+}
+
+
+/*Formuaire 1  - Nous Contacter */
+
+
+.formulaire1 p {
+    text-align: left !important;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.nom-formulaire1 {
+    border-radius: 7px !important;
+    border: solid white 2px;
+    width: 383px;
+    height: 71px;
+    flex-shrink: 0;
+    background: #FFF;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.04);
+}
+
+.mail-formulaire1 {
+    border-radius: 7px !important;
+    border: solid white 2px;
+    width: 383px;
+    height: 71px;
+    flex-shrink: 0;
+    background: #FFF;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.04);
+}
+
+.message-formulaire1 {
+    border-radius: 7px !important;
+    border: solid white 2px;
+    width: 383px;
+    height: 237px;
+    flex-shrink: 0;
+    background: #FFF;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.04);
+}
+
+.message-formulaire1  :active {
+    border: solid #C02E44 3px;
+}
+
+
+.butao-envoyer1 {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+    border-radius: 7px !important;
+    margin-top: 20px;
+
+}
+
+.butao-envoyer1 :hover {
+    background: #C02E44;
+    color: white;
+}
+
+
+.envoyer-formulaire1 {
+    display: flex;
+    width: 198px;
+    height: 55px;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
+    border-radius: 7px !important;
+    color: white;
+    background-color: #DC9F96;
 }
 
-/*formulaire 'nous contacter'*/
-.nous-contacter {
-    font-family: Syne;
 
-}
 
-.wpcf7-form-control-wrap {
-    border-radius: 10px;
-}
+
+
+
+
+
 
 
 /* nav */
@@ -94,7 +166,6 @@ h3{
 #logo img {
     width: 201px;
     height: 19px;
-    flex-shrink: 0;
 }
 
 #menu {
@@ -117,6 +188,12 @@ h3{
     margin-left: 20px !important;
 }
 
+.boutoncommandes {
+    background-color: #DC9F96;
+    color:white !important;
+    padding: 30px 61px 31px 61px ;
+}
+
 #menu ul li a {
     font-family: Syne !important; 
     font-size: 16px !important;
@@ -124,12 +201,31 @@ h3{
     line-height: 19px !important;
     letter-spacing: 0em !important;
     text-align: left !important;
+    text-decoration: none;
+    color: black
+}
+
+#menu ul li a :hover {
+    font-weight: 800 !important;
 }
 
 
+.boutoncommandes :hover {
+    background-color: #C02E44;
+    padding: 30px 61px 31px 61px ;
+    font-weight: 800 !important;
+}
+
+.logo-nav {
+    margin-left: 37px;
+}
 
 /* ce quils pensent */
 
-.fatiha {
+.elementor-widget-image-box .elementor-image-box-description {
+    text-align: left;
+}
+
+.elementor-38 .elementor-element.elementor-element-4eca8eb .elementor-image-box-title {
     text-align: left;
 }

@@ -1,11 +1,13 @@
 </main>
 <?php get_sidebar(); ?>
 
-<div class=footerfoutu>
+
 <footer id="footer" role="contentinfo">
-   <a href="http://https://www.tibia.com/abouttibia/"> Mention Legales </a>
+   <div class=footerfoutu>
+      <a href="http://https://www.tibia.com/abouttibia/"> Mention Légales </a>
+   </div>
 </footer>
-</div>
+
 <?php wp_footer(); ?>
 </body>
 </html>
