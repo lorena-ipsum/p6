@@ -14,12 +14,17 @@ if ( !function_exists( 'chld_thm_cfg_locale_css' ) ):
 endif;
 add_filter( 'locale_stylesheet_uri', 'chld_thm_cfg_locale_css' );
 
-if ( !function_exists( 'chld_thm_cfg_parent_css' ) ):
+
+
+//function pour la feille de style du theme enfant
+if (!function_exists('chld_thm_cfg_parent_css')) {
     function chld_thm_cfg_parent_css() {
-        wp_enqueue_style( 'chld_thm_cfg_parent', trailingslashit( get_template_directory_uri() ) . 'style.css', array(  ) );
+        // Enfileira o estilo do tema filho diretamente
+        wp_enqueue_style('child-style', get_stylesheet_uri(), array(), '1.0', 'all');
     }
-endif;
-add_action( 'wp_enqueue_scripts', 'chld_thm_cfg_parent_css', 10 );
+    add_action('wp_enqueue_scripts', 'chld_thm_cfg_parent_css');
+}
+
 
 // END ENQUEUE PARENT ACTION
 
