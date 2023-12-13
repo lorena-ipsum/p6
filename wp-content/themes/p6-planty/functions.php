@@ -2,33 +2,14 @@
 // Exit if accessed directly
 if ( !defined( 'ABSPATH' ) ) exit;
 
-// BEGIN ENQUEUE PARENT ACTION
-// AUTO GENERATED - Do not modify or remove comment markers above or below:
-
-if ( !function_exists( 'chld_thm_cfg_locale_css' ) ):
-    function chld_thm_cfg_locale_css( $uri ){
-        if ( empty( $uri ) && is_rtl() && file_exists( get_template_directory() . '/rtl.css' ) )
-            $uri = get_template_directory_uri() . '/rtl.css';
-        return $uri;
-    }
-endif;
-add_filter( 'locale_stylesheet_uri', 'chld_thm_cfg_locale_css' );
-
-
-
-//function pour la feille de style du theme enfant
-if (!function_exists('chld_thm_cfg_parent_css')) {
-    function chld_thm_cfg_parent_css() {
-        // Enfileira o estilo do tema filho diretamente
-        wp_enqueue_style('child-style', get_stylesheet_uri(), array(), '1.0', 'all');
-    }
-    add_action('wp_enqueue_scripts', 'chld_thm_cfg_parent_css');
+// Enqueue parent theme style
+add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
+function theme_enqueue_styles() {
+    wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
+    wp_enqueue_style( 'child-style', get_stylesheet_uri(), array( 'parent-style' ), wp_get_theme()->get('Version') );
 }
 
-
-// END ENQUEUE PARENT ACTION
-
-//hooook du lien admin
+// hooooook du lien
 add_filter( 'wp_nav_menu_items', 'add_admin_link', 10, 2 );
 function add_admin_link( $items, $args ) {
     if ( is_user_logged_in() && $args->theme_location == 'Principal' ) {
@@ -37,4 +18,3 @@ function add_admin_link( $items, $args ) {
     return $items;
 }
 ?>
-

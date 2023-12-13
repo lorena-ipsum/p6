@@ -82,8 +82,9 @@ h3 {
     display: inline-block;
 }
 
-#menu ul {
+#menu ul li {
     list-style: none !important;
+    text-decoration: none !important;
     margin: 0;
     padding: 0;
 }
@@ -93,24 +94,48 @@ h3 {
     margin-left: 20px !important;
 }
 
-#menu ul li a {
-    font-family: Syne !important; 
-    font-size: 16px !important;
-    font-weight: 400 !important; 
-    line-height: 19px !important;
-    letter-spacing: 0em !important;
-    text-align: left !important;
+.menu-item-54 a {
+    font-family: Syne;
+    color:black;
+    font-size: 16px ;
+    font-weight: 400 ; 
+    line-height: 19px ;
+    letter-spacing: 0em ;
+    text-align: left ;
+    text-decoration: none !important;
 }
 
+.menu-item-54:hover {
+    font-weight: 900 ;
+}
+
+.menu-item-289 a {
+    background-color: #DC9F96;
+    padding: 30px 61px 30px 60px;
+    text-decoration: none;
+    color: #FFF;
+    text-align: center;
+    font-family: Syne;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
+
+.menu-item-289:hover {
+    font-weight: 900 ;
+    background-color: #C02E44;
+}
 
 
 
 /*footer*/
 .footerfoutu {
-    justify-content: center;
+    display: flex;
+    justify-content: center !important;
     align-items: center;
     background-color: white;
-    align-items: center;
     height: 60px;
 }
 
@@ -118,18 +143,22 @@ h3 {
     text-decoration: none !important;
     color: black;
     font-family: syne;
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
   
 }
 
 
-/*Formuaire 1  - Nous Contacter */
-.formulaire1 p {
+/*Formuaires  - Nous Contacter */
+.formulaire p {
     text-align: left !important;
     padding-top: 15px;
     padding-bottom: 15px;
+    color:#FFF;
 }
 
-.nom-formulaire1 {
+.champs-formulaire {
     border-radius: 7px !important;
     border: solid white 2px;
     width: 383px;
@@ -139,17 +168,11 @@ h3 {
     box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.04);
 }
 
-.mail-formulaire1 {
-    border-radius: 7px !important;
-    border: solid white 2px;
-    width: 383px;
-    height: 71px;
-    flex-shrink: 0;
-    background: #FFF;
-    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.04);
+.champs-formulaire  :active {
+    border: solid #C02E44 3px;
 }
 
-.message-formulaire1 {
+.champs-formulaire-message {
     border-radius: 7px !important;
     border: solid white 2px;
     width: 383px;
@@ -157,35 +180,36 @@ h3 {
     flex-shrink: 0;
     background: #FFF;
     box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.04);
+
 }
 
-.message-formulaire1  :active {
-    border: solid #C02E44 3px;
-}
-
-
-.butao-envoyer1 {
+.butao-envoyer {
     display: flex !important;
     flex-direction: column;
     justify-content: center !important;
     align-items: center !important;
-    border-radius: 7px !important;
-    margin-top: 20px;
-
+    
 }
 
-.butao-envoyer1 :hover {
-    background: #C02E44;
-    color: white;
+.envoyer-formulaire :hover {
+    background-color: #C02E44;
+    cursor: pointer;
 }
 
 
-.envoyer-formulaire1 {
+.envoyer-formulaire {
     display: flex;
     width: 198px;
     height: 55px;
     justify-content: center;
     align-items: center;
+    border-radius: 7px !important;
+    margin-top: 20px;
+    background-color: #DC9F96;
+    color: white;
+    font: syne;
+    border: none;
+
 }
 
 /*formulaire 'nous contacter'*/
@@ -209,6 +233,13 @@ h3 {
     flex-shrink: 0;
 }
 
+.commande-number {
+    width: 39px;
+    height: 56px;
+    flex-shrink: 0;
+}
+
+.commandes-quantite
 
 
 
