@@ -107,12 +107,11 @@ h3 {
 
 /*footer*/
 .footerfoutu {
-    display: flex;
-    justify-content: center !important;
-    align-items: center !important;
+    justify-content: center;
+    align-items: center;
     background-color: white;
-    font: Syne !important;
-    height: 60px !important;
+    align-items: center;
+    height: 60px;
 }
 
 .footerfoutu a {
@@ -187,13 +186,13 @@ h3 {
     height: 55px;
     justify-content: center;
     align-items: center;
-    flex-shrink: 0;
-    border-radius: 7px !important;
-    color: white;
-    background-color: #DC9F96;
 }
 
+/*formulaire 'nous contacter'*/
+.nous-contacter {
+    font-family: Syne;
 
+}
 
 /* FORMULAIRE COMMANDES */
 .butao-envoyer2{
