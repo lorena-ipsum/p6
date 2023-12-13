@@ -49,6 +49,10 @@ h3 {
     text-align: center;
 }
 
+.xoxo {
+    display:none;
+}
+
 /* nav */
 #header {
     display: flex;
@@ -66,6 +70,7 @@ h3 {
 #logo img {
     width: 201px;
     height: 19px;
+    flex-shrink: 0;
 }
 
 #menu {
@@ -88,12 +93,6 @@ h3 {
     margin-left: 20px !important;
 }
 
-.boutoncommandes {
-    background-color: #DC9F96;
-    color:white !important;
-    padding: 30px 61px 31px 61px ;
-}
-
 #menu ul li a {
     font-family: Syne !important; 
     font-size: 16px !important;
@@ -101,24 +100,9 @@ h3 {
     line-height: 19px !important;
     letter-spacing: 0em !important;
     text-align: left !important;
-    text-decoration: none;
-    color: black
-}
-
-#menu ul li a :hover {
-    font-weight: 800 !important;
 }
 
 
-.boutoncommandes :hover {
-    background-color: #C02E44;
-    padding: 30px 61px 31px 61px ;
-    font-weight: 800 !important;
-}
-
-.logo-nav {
-    margin-left: 37px;
-}
 
 
 /*footer*/
@@ -239,10 +223,6 @@ h3 {
 
 /* ce quils pensent - elementor ne voulais pas m'obeir. pas grave, je te force!*/
 
-.elementor-widget-image-box .elementor-image-box-description {
-    text-align: left;
-}
-
-.elementor-38 .elementor-element.elementor-element-4eca8eb .elementor-image-box-title {
+.fatiha {
     text-align: left;
 }

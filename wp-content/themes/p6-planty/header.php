@@ -9,9 +9,9 @@
     <?php wp_body_open(); ?>
     <div id="wrapper" class="hfeed">
     <header id="header" role="banner">
-    <div id="branding" class=logo-nav>
-        <a href="http://localhost:8888/Planty/">
-            <img src="http://localhost:8888/Planty/wp-content/uploads/2023/12/Logo.jpg" alt="Logo do Site">
+    <div id="branding">
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="logo">
+            <img src="/Applications/MAMP/htdocs/Planty/wp-content/themes/p6-planty/assets/img/Logo.jpg" alt="Logo do Site">
         </a>
     </div>
     <nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">

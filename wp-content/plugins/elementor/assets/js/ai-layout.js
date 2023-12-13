@@ -1,4 +1,4 @@
-/*! elementor - v3.18.0 - 08-12-2023 */
+/*! elementor - v3.18.0 - 06-12-2023 */
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -1713,40 +1713,6 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ "../modules/ai/assets/js/editor/layout-app-wrapper.js":
-/*!************************************************************!*\
-  !*** ../modules/ai/assets/js/editor/layout-app-wrapper.js ***!
-  \************************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = void 0;
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
-var _ui = __webpack_require__(/*! @elementor/ui */ "@elementor/ui");
-var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "../node_modules/prop-types/index.js"));
-var LayoutAppWrapper = function LayoutAppWrapper(props) {
-  return /*#__PURE__*/_react.default.createElement(_ui.DirectionProvider, {
-    rtl: props.isRTL
-  }, /*#__PURE__*/_react.default.createElement(_ui.ThemeProvider, {
-    colorScheme: props.colorScheme
-  }, props.children));
-};
-LayoutAppWrapper.propTypes = {
-  children: _propTypes.default.node,
-  isRTL: _propTypes.default.bool,
-  colorScheme: _propTypes.default.oneOf(['auto', 'light', 'dark'])
-};
-var _default = LayoutAppWrapper;
-exports["default"] = _default;
-
-/***/ }),
-
 /***/ "../modules/ai/assets/js/editor/layout-app.js":
 /*!****************************************************!*\
   !*** ../modules/ai/assets/js/editor/layout-app.js ***!
@@ -1762,34 +1728,51 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports["default"] = void 0;
 var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
+var _ui = __webpack_require__(/*! @elementor/ui */ "@elementor/ui");
 var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "../node_modules/prop-types/index.js"));
 var _layoutContent = _interopRequireDefault(__webpack_require__(/*! ./layout-content */ "../modules/ai/assets/js/editor/layout-content.js"));
 var _attachment = __webpack_require__(/*! ./types/attachment */ "../modules/ai/assets/js/editor/types/attachment.js");
 var _config = __webpack_require__(/*! ./pages/form-layout/context/config */ "../modules/ai/assets/js/editor/pages/form-layout/context/config.js");
 var _remoteConfig = __webpack_require__(/*! ./pages/form-layout/context/remote-config */ "../modules/ai/assets/js/editor/pages/form-layout/context/remote-config.js");
-var _generateIds = __webpack_require__(/*! ./utils/generate-ids */ "../modules/ai/assets/js/editor/utils/generate-ids.js");
-var LayoutApp = function LayoutApp(props) {
-  return /*#__PURE__*/_react.default.createElement(_remoteConfig.RemoteConfigProvider, {
-    onError: props.onClose
+var LayoutApp = function LayoutApp(_ref) {
+  var mode = _ref.mode,
+    isRTL = _ref.isRTL,
+    colorScheme = _ref.colorScheme,
+    attachmentsTypes = _ref.attachmentsTypes,
+    attachments = _ref.attachments,
+    onClose = _ref.onClose,
+    onConnect = _ref.onConnect,
+    onData = _ref.onData,
+    onInsert = _ref.onInsert,
+    onSelect = _ref.onSelect,
+    onGenerate = _ref.onGenerate,
+    currentContext = _ref.currentContext,
+    hasPro = _ref.hasPro;
+  return /*#__PURE__*/_react.default.createElement(_ui.DirectionProvider, {
+    rtl: isRTL
+  }, /*#__PURE__*/_react.default.createElement(_ui.ThemeProvider, {
+    colorScheme: colorScheme
+  }, /*#__PURE__*/_react.default.createElement(_remoteConfig.RemoteConfigProvider, {
+    onError: onClose
   }, /*#__PURE__*/_react.default.createElement(_config.ConfigProvider, {
-    mode: props.mode,
-    attachmentsTypes: props.attachmentsTypes,
-    onClose: props.onClose,
-    onConnect: props.onConnect,
-    onData: props.onData,
-    onInsert: props.onInsert,
-    onSelect: props.onSelect,
-    onGenerate: props.onGenerate,
-    currentContext: props.currentContext,
-    hasPro: props.hasPro,
-    sessionId: "session-".concat((0, _generateIds.getUniqueId)()),
-    editorSessionId: props.editorSessionId
+    mode: mode,
+    attachmentsTypes: attachmentsTypes,
+    onClose: onClose,
+    onConnect: onConnect,
+    onData: onData,
+    onInsert: onInsert,
+    onSelect: onSelect,
+    onGenerate: onGenerate,
+    currentContext: currentContext,
+    hasPro: hasPro
   }, /*#__PURE__*/_react.default.createElement(_layoutContent.default, {
-    attachments: props.attachments
-  })));
+    attachments: attachments
+  })))));
 };
 LayoutApp.propTypes = {
   mode: _propTypes.default.oneOf(_config.LAYOUT_APP_MODES).isRequired,
+  colorScheme: _propTypes.default.oneOf(['auto', 'light', 'dark']),
+  isRTL: _propTypes.default.bool,
   attachmentsTypes: _attachment.AttachmentsTypesPropType,
   attachments: _propTypes.default.arrayOf(_attachment.AttachmentPropType),
   onClose: _propTypes.default.func.isRequired,
@@ -1799,9 +1782,7 @@ LayoutApp.propTypes = {
   onSelect: _propTypes.default.func.isRequired,
   onGenerate: _propTypes.default.func.isRequired,
   currentContext: _propTypes.default.object,
-  hasPro: _propTypes.default.bool,
-  sessionId: _propTypes.default.string,
-  editorSessionId: _propTypes.default.string
+  hasPro: _propTypes.default.bool
 };
 var _default = LayoutApp;
 exports["default"] = _default;
@@ -3660,9 +3641,7 @@ var ConfigProvider = function ConfigProvider(props) {
       onSelect: props.onSelect,
       onGenerate: props.onGenerate,
       currentContext: props.currentContext,
-      hasPro: props.hasPro,
-      sessionId: props.sessionId,
-      editorSessionId: props.editorSessionId
+      hasPro: props.hasPro
     }
   }, props.children);
 };
@@ -3678,9 +3657,7 @@ ConfigProvider.propTypes = {
   onSelect: _propTypes.default.func.isRequired,
   onGenerate: _propTypes.default.func.isRequired,
   currentContext: _propTypes.default.object,
-  hasPro: _propTypes.default.bool,
-  sessionId: _propTypes.default.string,
-  editorSessionId: _propTypes.default.string
+  hasPro: _propTypes.default.bool
 };
 var _default = ConfigContext;
 exports["default"] = _default;
@@ -3971,7 +3948,6 @@ var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runt
 var _react = __webpack_require__(/*! react */ "react");
 var _useScreenshot = _interopRequireDefault(__webpack_require__(/*! ./use-screenshot */ "../modules/ai/assets/js/editor/pages/form-layout/hooks/use-screenshot.js"));
 var _config = __webpack_require__(/*! ../context/config */ "../modules/ai/assets/js/editor/pages/form-layout/context/config.js");
-var _generateIds = __webpack_require__(/*! ../../../utils/generate-ids */ "../modules/ai/assets/js/editor/utils/generate-ids.js");
 var PENDING_VALUE = {
   isPending: true
 };
@@ -3981,22 +3957,8 @@ var useScreenshots = function useScreenshots(_ref) {
     _useState2 = (0, _slicedToArray2.default)(_useState, 2),
     screenshots = _useState2[0],
     setScreenshots = _useState2[1];
-
-  /**
-   * The ids for each request are:
-   * - editorSessionId: a unique id for each editor opening
-   * - sessionId: a unique id for each session. (open the AI builder)
-   * - generateId: a unique id for each generate request. (prompt change)
-   * - batchId: a unique id for each batch of generate requests. (generate, regenerate)
-   * - requestId: a unique id for each generate request.
-   */
-
   var _useConfig = (0, _config.useConfig)(),
-    currentContext = _useConfig.currentContext,
-    sessionId = _useConfig.sessionId,
-    editorSessionId = _useConfig.editorSessionId;
-  var generateIdRef = (0, _react.useRef)('');
-  var batchId = "batch-".concat((0, _generateIds.getUniqueId)());
+    currentContext = _useConfig.currentContext;
   var screenshotsData = [(0, _useScreenshot.default)(0, onData), (0, _useScreenshot.default)(1, onData), (0, _useScreenshot.default)(2, onData)];
   var screenshotsGroupCount = screenshotsData.length;
   var error = screenshotsData.every(function (s) {
@@ -4046,13 +4008,6 @@ var useScreenshots = function useScreenshots(_ref) {
                 prompt: prompt,
                 prevGeneratedIds: prevGeneratedIds,
                 currentContext: currentContext,
-                ids: {
-                  editorSessionId: editorSessionId,
-                  sessionId: sessionId,
-                  generateId: generateIdRef.current,
-                  batchId: batchId,
-                  requestId: "request-".concat((0, _generateIds.getUniqueId)())
-                },
                 attachments: attachments.map(function (_ref4) {
                   var type = _ref4.type,
                     content = _ref4.content,
@@ -4093,7 +4048,6 @@ var useScreenshots = function useScreenshots(_ref) {
   }();
   var generate = function generate(prompt, attachments) {
     var placeholders = Array(screenshotsGroupCount).fill(PENDING_VALUE);
-    generateIdRef.current = "generate-".concat((0, _generateIds.getUniqueId)());
     setScreenshots(placeholders);
     createScreenshots(prompt, attachments);
   };
@@ -4797,8 +4751,7 @@ var _layoutApp = _interopRequireDefault(__webpack_require__(/*! ../layout-app */
 var _screenshot = __webpack_require__(/*! ./screenshot */ "../modules/ai/assets/js/editor/utils/screenshot.js");
 var _history = __webpack_require__(/*! ./history */ "../modules/ai/assets/js/editor/utils/history.js");
 var _i18n = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-var _generateIds = __webpack_require__(/*! ./generate-ids */ "../modules/ai/assets/js/editor/utils/generate-ids.js");
-var _layoutAppWrapper = _interopRequireDefault(__webpack_require__(/*! ../layout-app-wrapper */ "../modules/ai/assets/js/editor/layout-app-wrapper.js"));
+var _genereateIds = __webpack_require__(/*! ./genereate-ids */ "../modules/ai/assets/js/editor/utils/genereate-ids.js");
 var closePanel = function closePanel() {
   $e.run('panel/close');
   $e.components.get('panel').blockUserInteractions();
@@ -4845,7 +4798,6 @@ var VARIATIONS_PROMPTS = [{
   text: (0, _i18n.__)('Warm hues with comforting visuals about', 'elementor')
 }];
 var PROMPT_PLACEHOLDER = (0, _i18n.__)("Press '/' for suggestions or describe the changes you want to apply (optional)...", 'elementor');
-var EDITOR_SESSION_ID = "editor-session-".concat((0, _generateIds.getUniqueId)());
 var renderLayoutApp = function renderLayoutApp() {
   var _options$onRenderApp;
   var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {
@@ -4869,11 +4821,10 @@ var renderLayoutApp = function renderLayoutApp() {
   var rootElement = document.createElement('div');
   document.body.append(rootElement);
   var bodyStyle = window.elementorFrontend.elements.$window[0].getComputedStyle(window.elementorFrontend.elements.$body[0]);
-  ReactDOM.render( /*#__PURE__*/_react.default.createElement(_layoutAppWrapper.default, {
-    isRTL: isRTL,
-    colorScheme: colorScheme
-  }, /*#__PURE__*/_react.default.createElement(_layoutApp.default, {
+  ReactDOM.render( /*#__PURE__*/_react.default.createElement(_layoutApp.default, {
     mode: options.mode,
+    isRTL: isRTL,
+    colorScheme: colorScheme,
     currentContext: {
       body: {
         backgroundColor: bodyStyle.backgroundColor,
@@ -4958,9 +4909,8 @@ var renderLayoutApp = function renderLayoutApp() {
       previewContainer.setContent(template);
     },
     onInsert: options.onInsert,
-    hasPro: elementor.helpers.hasPro(),
-    editorSessionId: EDITOR_SESSION_ID
-  })), rootElement);
+    hasPro: elementor.helpers.hasPro()
+  }), rootElement);
   (_options$onRenderApp = options.onRenderApp) === null || _options$onRenderApp === void 0 ? void 0 : _options$onRenderApp.call(options, {
     previewContainer: previewContainer
   });
@@ -4983,7 +4933,7 @@ var importToEditor = function importToEditor(_ref2) {
   }
   $e.run('document/elements/create', {
     container: elementor.getPreviewContainer(),
-    model: (0, _generateIds.generateIds)(template),
+    model: (0, _genereateIds.generateIds)(template),
     options: {
       at: at,
       edit: true
@@ -4995,10 +4945,10 @@ exports.importToEditor = importToEditor;
 
 /***/ }),
 
-/***/ "../modules/ai/assets/js/editor/utils/generate-ids.js":
-/*!************************************************************!*\
-  !*** ../modules/ai/assets/js/editor/utils/generate-ids.js ***!
-  \************************************************************/
+/***/ "../modules/ai/assets/js/editor/utils/genereate-ids.js":
+/*!*************************************************************!*\
+  !*** ../modules/ai/assets/js/editor/utils/genereate-ids.js ***!
+  \*************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -5008,12 +4958,10 @@ Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
 exports.generateIds = generateIds;
-exports.getUniqueId = void 0;
 // Create missing IDs for the elements.
 var getUniqueId = function getUniqueId() {
   return Math.random().toString(16).substr(2, 7);
 };
-exports.getUniqueId = getUniqueId;
 function generateIds(template) {
   var _template$elements;
   template.id = getUniqueId().toString();
@@ -5197,7 +5145,7 @@ var _toConsumableArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/
 var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "../node_modules/@babel/runtime/helpers/asyncToGenerator.js"));
 var _htmlToImage = __webpack_require__(/*! html-to-image */ "../node_modules/html-to-image/es/index.js");
 var _history = __webpack_require__(/*! ./history */ "../modules/ai/assets/js/editor/utils/history.js");
-var _generateIds = __webpack_require__(/*! ./generate-ids */ "../modules/ai/assets/js/editor/utils/generate-ids.js");
+var _genereateIds = __webpack_require__(/*! ./genereate-ids */ "../modules/ai/assets/js/editor/utils/genereate-ids.js");
 var takeScreenshot = /*#__PURE__*/function () {
   var _ref = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee(template) {
     var hiddenWrapper, container, screenshot;
@@ -5299,7 +5247,7 @@ function createHiddenWrapper() {
   return wrapper;
 }
 function createContainer(template) {
-  var model = (0, _generateIds.generateIds)(template);
+  var model = (0, _genereateIds.generateIds)(template);
 
   // Set a custom ID, so it can be used later on in the backend.
   model.id = "e-ai-screenshot-container-".concat(model.id);
