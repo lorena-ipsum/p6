@@ -89,6 +89,15 @@ h3 {
     margin-left: 20px !important;
 }
 
+#menu li a {
+    text-decoration: none !important;
+    font-family: syne;
+    color: black;
+    font-size: 16px ;
+    font-weight: 400 ; 
+    line-height: 19px ;
+}
+
 .menu-item-54 a {
     font-family: Syne;
     color:black;
@@ -118,7 +127,7 @@ h3 {
 
 }
 
-.menu-item-289:hover {
+.menu-item-289 a:hover {
     font-weight: 900 ;
     background-color: #C02E44;
 }
@@ -187,7 +196,7 @@ h3 {
 }
 
 .envoyer-formulaire:hover {
-    background-color: #C02E44;
+    background-color: #C02E44 !important;
     cursor: pointer;
 }
 
@@ -249,25 +258,20 @@ h3 {
     flex-shrink: 0;
     text-align: center;
     color:black;
+    justify-content: center;
+    align-items: center;
 }
 
 
 .container-commander {
     display: flex;
     justify-content: space-between;
+    width: 800px;
 }
 
-.commandes-vosinfos {
-    width: 38%;
-    
+.border {
+    border-right: solid white 1px; 
 }
-
-.commandes-livraison {
-    width: 38%;
-    border-left: solid white 1px;
-    padding-left: 20px;
-}
-
 
 .champs-formulaire2 { 
     border-radius: 7px !important;
@@ -295,19 +299,9 @@ h3 {
     border: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.wpcf7-submit:hover {
+    background-color: #C02E44;
+}
 
 
 

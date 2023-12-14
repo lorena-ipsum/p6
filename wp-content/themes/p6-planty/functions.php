@@ -12,7 +12,7 @@ function theme_enqueue_styles() {
 // hooooook du lien
 add_filter( 'wp_nav_menu_items', 'add_admin_link', 10, 2 );
 function add_admin_link( $items, $args ) {
-    if ( is_user_logged_in() && $args->theme_location == 'Principal' ) {
+    if ( is_user_logged_in() && $args->theme_location == 'main-menu' ) {
         $items .= '<li><a href="' . admin_url() . '">Admin</a></li>';
     }
     return $items;
