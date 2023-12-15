@@ -67,7 +67,12 @@ h3 {
 #logo img {
     width: 201px;
     height: 19px;
-    flex-shrink: 0;
+    padding-left: 37px;
+    
+}
+
+.branding {
+    margin-left: 30px !important;
 }
 
 #menu {
@@ -111,8 +116,8 @@ h3 {
     text-decoration: none !important;
 }
 
-.menu-item-54:hover {
-    font-weight: 900 ;
+.menu-item-54 a:hover {
+    font-weight: 700 ;
 }
 
 .menu-item-289 a {
@@ -186,7 +191,6 @@ h3 {
     flex-shrink: 0;
     background: #FFF;
     box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.04);
-
 }
 
 .butao-envoyer {
@@ -194,7 +198,6 @@ h3 {
     flex-direction: column;
     justify-content: center !important;
     align-items: center !important;
-    
 }
 
 .envoyer-formulaire:hover {
@@ -253,38 +256,43 @@ h3 {
     padding-bottom: 50px;
 }
 
-
-
-/* Centrer les champs de nombre dans la section de commande */
 .formulaire2 .commande-number {
     display: block;
     margin: 0 auto;
     text-align: center !important;
 }
 
-
-
 .commande-number {
     width: 39px;
     height: 56px;
     flex-shrink: 0;
     text-align: center;
-    color:black;
     justify-content: center;
     align-items: center;
 }
 
-
 .container-commander {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    width: 800px;
+    width: 100%;
 }
 
 .border {
     border-right: solid white 1px;
-    padding-right: 15px; 
+    padding-right: 50px;
 }
+
+.commandes-vosinfos {
+    width: 50%;
+}
+
+
+.commandes-livraison {
+    width: 50%;
+    margin-left: 50px;
+}
+
 
 .champs-formulaire2 { 
     border-radius: 7px !important;
@@ -317,20 +325,71 @@ h3 {
 }
 
 
+/* RESPONSIIIIIIVE tablets*/
+
+@media screen and (max-width: 1024px) {
+
+    .champs-formulaire2 {
+        width: 325px;
+    }
 
 
-
-/* ce quils pensent - elementor ne voulais pas m'obeir. pas grave, je te force!*/
-
-.elementor-image-box-title h3 {
-    text-align: left;
 }
 
-.5b6218c {
-    text-align: left;
-}
+
+
+
+/* RESPONSIIIIIIVE telemobiles*/
+
+@media screen and (max-width: 768px) {
+    #logo img  {
+        width: 60px;
+        height: 8px;
+        padding-left: 5px;
+    }
+
+    .menu-item-54 a {
+        width: 60px;
+    }
+
+
+    .menu-item-289 a {
+        width: 60px;
+        padding: 61px 7px 30px 7px;
+    }
+
+    .champs-formulaire2,
+    .champs-formulaire,
+    .champs-formulaire-message {
+        width: 325px;
+    }
+    
+    .container-commander,
+    .commandes-vosinfos,
+    .commandes-livraison  {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column; 
+        align-items: center;
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+    }
+
+
+    
+    .border {
+        border-right: solid #3B8E46 1px;
+        padding-right: 1px;
+    }
+
+
+
+    }
+
+    
 
 
 
 
-/* RESPONSIIIIIIVE */
+

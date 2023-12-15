@@ -9,28 +9,20 @@
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
     <div id="wrapper" class="hfeed">
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-toggle">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </label>
-
-        <header id="header" role="banner">
-            <div id="branding">
-                <?php echo custom_header_logo(); ?>
-            </div>
-
-            <nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
-                <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'menu-container' ) ); ?>
-            </nav>
-        </header>
-
-        <div id="container">
-            <main id="content" role="main">
-                <!-- O conteúdo da página vai aqui -->
-            </main>
+    <header id="header" role="banner">
+        <div id="branding">
+            <?php echo custom_header_logo(); ?>
         </div>
+
+        <nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+            <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'menu-container' ) ); ?>
+        </nav>
+    </header>
+    <div id="container">
+        <main id="content" role="main">
+            <!-- O conteúdo da página vai aqui -->
+        </main>
+    </div>
     </div>
     <?php wp_footer(); ?>
 </body>
