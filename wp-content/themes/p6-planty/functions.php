@@ -17,4 +17,16 @@ function add_admin_link( $items, $args ) {
     }
     return $items;
 }
+
+// hook du logo
+function custom_header_logo() {
+    $logo_url = get_stylesheet_directory_uri() . '/assets/img/Logo.jpg'; // Chemin vers le logo, à personnaliser
+    $logo_html = '<a href="' . esc_url(home_url('/')) . '" id="logo"><img src="' . esc_url($logo_url) . '" alt="Logo do Site"></a>';
+    
+    return $logo_html;
+}
+
+
+
+
 ?>

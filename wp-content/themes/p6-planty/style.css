@@ -13,6 +13,8 @@ Updated: 2023-12-08 19:12:04
 plantyyyyyy BLANKKKKKKKK
 */
 
+
+
 p {
     font-family: Syne;
     font-size: 20px;
@@ -245,12 +247,22 @@ h3 {
 
 .commandes-quantite {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    border-bottom: solid white 1px;
-    padding-top: 50px; 
+    border-bottom: solid white 1px; 
     padding-bottom: 50px;
 }
+
+
+
+/* Centrer les champs de nombre dans la section de commande */
+.formulaire2 .commande-number {
+    display: block;
+    margin: 0 auto;
+    text-align: center !important;
+}
+
+
 
 .commande-number {
     width: 39px;
@@ -270,7 +282,8 @@ h3 {
 }
 
 .border {
-    border-right: solid white 1px; 
+    border-right: solid white 1px;
+    padding-right: 15px; 
 }
 
 .champs-formulaire2 { 
@@ -316,3 +329,8 @@ h3 {
 .5b6218c {
     text-align: left;
 }
+
+
+
+
+/* RESPONSIIIIIIVE */
