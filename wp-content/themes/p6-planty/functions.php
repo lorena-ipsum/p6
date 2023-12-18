@@ -10,13 +10,22 @@ function theme_enqueue_styles() {
 }
 
 // hooooook du lien
-add_filter( 'wp_nav_menu_items', 'add_admin_link', 10, 2 );
-function add_admin_link( $items, $args ) {
-    if ( is_user_logged_in() && $args->theme_location == 'main-menu' ) {
-        $items .= '<li><a href="' . admin_url() . '">Admin</a></li>';
+add_filter('wp_nav_menu_items', 'add_admin_link', 10, 2);
+function add_admin_link($items, $args)
+{
+    if (is_user_logged_in() && $args->theme_location == 'main-menu') {
+        // Créez le lien "Admin"
+        $admin_link = '<li><a href="' . admin_url() . '">Admin</a></li>';
+
+        // Trouvez la position du lien "Nous rencontrer"
+        $meet_us_position = strpos($items, 'Nous rencontrer');
+
+        // Insérez le lien "Admin" juste après le lien "Nous rencontrer"
+        $items = substr_replace($items, $admin_link, $meet_us_position + strlen('Nous rencontrer'), 0);
     }
     return $items;
 }
+
 
 // hook du logo
 function custom_header_logo() {
