@@ -117,14 +117,14 @@ h3 {
 }
 
 .menu-item-54 a:hover {
-    font-weight: 700 ;
+    font-weight: 500 !important;
 }
 
 .menu-item-289 a {
     background-color: #DC9F96;
     padding: 30px 61px 30px 60px;
     text-decoration: none;
-    color: #FFF;
+    color: #FFF !important;
     text-align: center;
     font-family: Syne;
     font-size: 16px;
@@ -161,12 +161,35 @@ h3 {
 }
 
 
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+ 
+/* Chrome */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button { 
+	-webkit-appearance: none;
+	margin:0;
+}
+ 
+/* Opéra*/
+input::-o-inner-spin-button,
+input::-o-outer-spin-button { 
+	-o-appearance: none;
+	margin:0
+}
+
+
+
+
+
 /*Formuaires  - Nous Contacter */
 .formulaire p {
     text-align: left !important;
     padding-top: 15px;
     padding-bottom: 15px;
-    color:#FFF;
+    color:black;
 }
 
 .champs-formulaire {
