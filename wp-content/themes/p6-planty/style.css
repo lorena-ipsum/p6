@@ -101,7 +101,7 @@ h3 {
     font-family: syne;
     color: black;
     font-size: 16px ;
-    font-weight: 400 ; 
+    font-weight: 700 ; 
     line-height: 19px ;
 }
 
@@ -109,7 +109,7 @@ h3 {
     font-family: Syne;
     color:black;
     font-size: 16px ;
-    font-weight: 400 ; 
+    font-weight: 400 !important; 
     line-height: 19px ;
     letter-spacing: 0em ;
     text-align: left ;
@@ -117,7 +117,7 @@ h3 {
 }
 
 .menu-item-54 a:hover {
-    font-weight: 500 !important;
+    font-weight: 700 !important;
 }
 
 .menu-item-289 a {
@@ -129,13 +129,12 @@ h3 {
     font-family: Syne;
     font-size: 16px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     line-height: normal;
 
 }
 
 .menu-item-289 a:hover {
-    font-weight: 900 ;
     background-color: #C02E44;
 }
 
@@ -161,24 +160,6 @@ h3 {
 }
 
 
-/* Firefox */
-input[type=number] {
-    -moz-appearance: textfield;
-}
- 
-/* Chrome */
-input::-webkit-inner-spin-button,
-input::-webkit-outer-spin-button { 
-	-webkit-appearance: none;
-	margin:0;
-}
- 
-/* Opéra*/
-input::-o-inner-spin-button,
-input::-o-outer-spin-button { 
-	-o-appearance: none;
-	margin:0
-}
 
 
 
@@ -221,7 +202,11 @@ input::-o-outer-spin-button {
     flex-direction: column;
     justify-content: center !important;
     align-items: center !important;
+    
 }
+
+.wpcf7-submit {
+    font: Syne 15px 400;}
 
 .envoyer-formulaire:hover {
     background-color: #C02E44 !important;
@@ -348,6 +333,26 @@ input::-o-outer-spin-button {
 }
 
 
+/* Pour enlever les fleches dans le champs "quantite" */
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+ 
+/* Chrome */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button { 
+	-webkit-appearance: none;
+	margin:0;
+}
+ 
+/* Opéra*/
+input::-o-inner-spin-button,
+input::-o-outer-spin-button { 
+	-o-appearance: none;
+	margin:0
+}
+
 /* RESPONSIIIIIIVE tablets*/
 
 @media screen and (max-width: 1024px) {
@@ -362,7 +367,7 @@ input::-o-outer-spin-button {
 
 
 
-/* RESPONSIIIIIIVE telemobiles*/
+/* RESPONSIVE telemobiles*/
 
 @media screen and (max-width: 768px) {
     #logo img  {
@@ -373,12 +378,18 @@ input::-o-outer-spin-button {
 
     .menu-item-54 a {
         width: 60px;
+        font-size: 14px;
+    }
+
+    .menu-item-54 a:hover {
+        font-weight: 400 !importantÒ;
     }
 
 
     .menu-item-289 a {
         width: 60px;
         padding: 61px 7px 30px 7px;
+        font-size: 14px;
     }
 
     .champs-formulaire2,
