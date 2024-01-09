@@ -35,7 +35,4 @@ function custom_header_logo() {
     return $logo_html;
 }
 
-
-
-
 ?>

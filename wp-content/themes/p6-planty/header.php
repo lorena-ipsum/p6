@@ -20,7 +20,7 @@
     </header>
     <div id="container">
         <main id="content" role="main">
-            <!-- O conteúdo da página vai aqui -->
+            <!-- CONTENU DE PLANTY VA ICI -->
         </main>
     </div>
     </div>

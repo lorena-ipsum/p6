@@ -10,11 +10,10 @@ Version: 2023.1702059124
 Updated: 2023-12-08 19:12:04
 
 
-plantyyyyyy BLANKKKKKKKK
+planty fait sur la base du théme BLANK SLATE
 */
 
-
-
+/* STYLES GENERAUX*/
 p {
     font-family: Syne;
     font-size: 20px;
@@ -63,12 +62,10 @@ h3 {
     background-color: white;
 }
 
-
 #logo img {
     width: 201px;
     height: 19px;
     padding-left: 37px;
-    
 }
 
 .branding {
@@ -138,8 +135,6 @@ h3 {
     background-color: #C02E44;
 }
 
-
-
 /*footer*/
 .footerfoutu {
     display: flex;
@@ -158,12 +153,6 @@ h3 {
     align-items: center;
   
 }
-
-
-
-
-
-
 
 /*Formuaires  - Nous Contacter */
 .formulaire p {
@@ -202,17 +191,16 @@ h3 {
     flex-direction: column;
     justify-content: center !important;
     align-items: center !important;
-    
 }
 
 .wpcf7-submit {
-    font: Syne 15px 400;}
+    font: 15px;
+}
 
 .envoyer-formulaire:hover {
     background-color: #C02E44 !important;
     cursor: pointer;
 }
-
 
 .envoyer-formulaire {
     display: flex;
@@ -224,11 +212,8 @@ h3 {
     margin-top: 20px;
     background-color: #DC9F96;
     color: white;
-    font: syne;
     border: none;
 }
-
-
 
 /* FORMULAIRE COMMANDES */
 .formulaire2 h4 {
@@ -242,7 +227,6 @@ h3 {
     padding-top: 20px;
     padding-bottom: 20px;
 }
-
 
 .formulaire2 p {
     color: white;
@@ -295,12 +279,10 @@ h3 {
     width: 50%;
 }
 
-
 .commandes-livraison {
     width: 50%;
     margin-left: 50px;
 }
-
 
 .champs-formulaire2 { 
     border-radius: 7px !important;
@@ -324,7 +306,6 @@ h3 {
     margin-top: 20px;
     background-color: #DC9F96;
     color: white;
-    font: syne;
     border: none;
 }
 
@@ -354,21 +335,15 @@ input::-o-outer-spin-button {
 }
 
 /* RESPONSIIIIIIVE tablets*/
-
 @media screen and (max-width: 1024px) {
 
     .champs-formulaire2 {
         width: 325px;
     }
-
-
 }
 
 
-
-
 /* RESPONSIVE telemobiles*/
-
 @media screen and (max-width: 768px) {
     #logo img  {
         width: 60px;
@@ -382,9 +357,8 @@ input::-o-outer-spin-button {
     }
 
     .menu-item-54 a:hover {
-        font-weight: 400 !importantÒ;
+        font-weight: 400 !important;
     }
-
 
     .menu-item-289 a {
         width: 60px;
@@ -409,17 +383,12 @@ input::-o-outer-spin-button {
         padding: 0px;
         margin: 0px;
     }
-
-
-    
+ 
     .border {
         border-right: solid #3B8E46 1px;
         padding-right: 1px;
     }
-
-
-
-    }
+}
 
     
 
